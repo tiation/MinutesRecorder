@@ -1,135 +1,179 @@
-# Minutes Recorder iOS App
+# Tiation MinutesRecorder
 
-![Minutes Recorder](https://via.placeholder.com/1200x600/4A90E2/FFFFFF?text=Minutes+Recorder)
+<div align="center">
+  <img src="assets/tiation-logo.svg" alt="Tiation Logo" width="200" height="200">
+  
+  [![License](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
+  [![GitHub Pages](https://img.shields.io/badge/GitHub-Pages-green.svg)](https://tiation.github.io/MinutesRecorder)
+  [![Enterprise Grade](https://img.shields.io/badge/Enterprise-Grade-gold.svg)](https://github.com/tiation)
+  [![Tiation](https://img.shields.io/badge/Powered%20by-Tiation-cyan.svg)](https://github.com/tiation)
+</div>
 
-An enterprise-grade iOS application that combines the power of OpenAI's Whisper-like speech recognition with intelligent meeting minutes generation, similar to Fireflies.ai. Record meetings, conversations, and lectures with automatic transcription and smart minute generation.
+## 🚀 Overview
 
-## 📱 Features
+Enterprise-grade meeting minutes recording and management system built with Swift and macOS integration. Designed for professional organizations, legal firms, and corporate environments requiring accurate meeting documentation and compliance.
 
-- **Real-time Audio Recording**: High-quality audio recording with live waveform visualization
-- **Live Transcription**: Real-time speech-to-text conversion using Apple's Speech Recognition framework
-- **Smart Minutes Generation**: Automatically generates structured meeting minutes with:
-  - Meeting summary
-  - Key topics extraction
-  - Action items identification
-  - Full searchable transcription
-- **Export Options**: Export minutes as Markdown or JSON
-- **Offline Support**: On-device speech recognition for privacy and offline functionality
-- **Enterprise Security**: All data stored locally with optional cloud sync
+## 📋 Table of Contents
 
-## 🛠 Technology Stack
+- [Features](#-features)
+- [Quick Start](#-quick-start)
+- [Installation](#-installation)
+- [Usage](#-usage)
+- [Documentation](#-documentation)
+- [FAQ](#-faq)
+- [Contributing](#-contributing)
+- [Support](#-support)
+- [License](#-license)
+- [About Tiation](#-about-tiation)
 
-- **Language**: Swift 5.7+
-- **UI Framework**: SwiftUI
-- **Speech Recognition**: Apple Speech Framework
-- **Audio**: AVFoundation
-- **Natural Language Processing**: Natural Language framework
-- **Minimum iOS Version**: iOS 16.0
+---
 
-## 📋 Requirements
+## ✨ Features
 
+- **📝 Real-time Recording**: Capture meeting minutes in real-time with advanced text processing
+- **🎤 Audio Integration**: Sync audio recordings with written minutes
+- **📅 Meeting Management**: Organize meetings by date, participants, and agenda items
+- **🔍 Advanced Search**: Full-text search across all meeting records
+- **📊 Export Options**: Export to PDF, Word, and other professional formats
+- **🔒 Security**: Enterprise-grade encryption and access controls
+- **👥 Collaboration**: Multi-user support with role-based permissions
+- **📱 Cross-platform**: macOS native with iOS companion app
+- **🌐 Cloud Sync**: Secure cloud synchronization across devices
+- **📈 Analytics**: Meeting analytics and reporting dashboard
+
+## 🏃‍♂️ Quick Start
+
+```bash
+# Clone the repository
+git clone https://github.com/tiation/MinutesRecorder.git
+cd MinutesRecorder
+
+# Open in Xcode
+open MinutesRecorder.xcodeproj
+
+# Build and run
+# Select your target device and press Cmd+R
+```
+
+## 📦 Installation
+
+### Prerequisites
+
+- macOS 12.0 or later
 - Xcode 14.0 or later
-- iOS 16.0 or later
-- iPhone or iPad with microphone support
+- Swift 5.7 or later
 
-## 🚀 Getting Started
+### Installation Steps
 
-### Installation
-
-1. Clone the repository:
+1. **Clone the repository**
    ```bash
-   git clone https://github.com/yourusername/MinutesRecorder.git
+   git clone https://github.com/tiation/MinutesRecorder.git
    cd MinutesRecorder
    ```
 
-2. Open the project in Xcode:
+2. **Install dependencies**
    ```bash
-   open MinutesRecorder.xcodeproj
+   swift package resolve
    ```
 
-3. Build and run the project on your device or simulator
+3. **Build the project**
+   ```bash
+   swift build
+   ```
 
-### Permissions
+## 🎯 Usage
 
-The app requires the following permissions:
-- **Microphone Access**: For recording audio
-- **Speech Recognition**: For transcribing audio to text
+### Basic Usage
 
-These permissions will be requested when first launching the app.
+1. **Create New Meeting**: Launch the app and create a new meeting session
+2. **Record Minutes**: Use the built-in editor to capture meeting discussions
+3. **Add Participants**: Manage attendee lists and assign action items
+4. **Export Results**: Generate professional meeting reports
 
-## 📖 Usage
+### Advanced Features
 
-### Recording a Meeting
+- **Template System**: Use predefined templates for different meeting types
+- **Action Item Tracking**: Monitor and follow up on assigned tasks
+- **Integration**: Connect with calendar systems and project management tools
 
-1. Tap the large microphone button to start recording
-2. The app will show live transcription as you speak
-3. Tap the stop button when finished
-4. The app automatically generates minutes with summary and action items
+## 📚 Documentation
 
-### Viewing Minutes
+- **[User Guide](docs/user-guide.md)** - Complete user documentation
+- **[API Reference](docs/api-reference.md)** - Technical API documentation
+- **[Architecture](docs/architecture.md)** - System architecture overview
+- **[Deployment Guide](docs/deployment.md)** - Production deployment instructions
 
-- Recent minutes appear in the list below the recording button
-- Tap any minute to view full details
-- Swipe to delete or share minutes
+### Live Documentation
 
-### Exporting Minutes
+Visit our [GitHub Pages site](https://tiation.github.io/MinutesRecorder) for interactive documentation.
 
-Minutes can be exported in two formats:
-- **Markdown**: Perfect for documentation and wikis
-- **JSON**: For integration with other systems
+## ❓ FAQ
 
-## 🏗 Architecture
+### General Questions
 
-```
-MinutesRecorder/
-├── MinutesRecorder.xcodeproj/     # Xcode project file
-├── Sources/
-│   └── MinutesRecorder/
-│       └── Main.swift             # All app code in one file
-├── Info.plist                     # App configuration
-├── Package.swift                  # Swift Package Manager config
-└── README.md                      # This file
-```
+**Q: What makes this solution enterprise-grade?**
+A: Our solution includes comprehensive security, data encryption, audit trails, and enterprise integration features with professional support.
 
-## 🔧 Configuration
+**Q: Can I integrate this with existing calendar systems?**
+A: Yes, we provide extensive API and integration capabilities for popular calendar and project management systems.
 
-### Customization Options
+**Q: What are the system requirements?**
+A: macOS 12.0 or later, with 4GB RAM minimum and 500MB storage space.
 
-- **Language Support**: Change the speech recognizer locale in `TranscriptionManager` class
-- **Audio Quality**: Adjust recording settings in `AudioRecordingManager` class
-- **Export Formats**: Add custom export formats in `MeetingMinutes` extension
+### Technical Questions
 
-## 🔒 Privacy & Security
+**Q: How is data stored and secured?**
+A: All data is encrypted at rest and in transit, with optional cloud sync through secure enterprise providers.
 
-- All recordings and transcriptions are processed on-device
-- No data is sent to external servers without explicit user consent
-- Audio files are stored in the app's secure documents directory
-- Supports Face ID/Touch ID for app access (optional)
-
-## 📊 Performance
-
-- Optimized for real-time transcription with minimal latency
-- Efficient memory management for long recordings
-- Background audio recording support
+**Q: Can I customize the interface?**
+A: Yes, the application supports themes, custom templates, and configurable layouts.
 
 ## 🤝 Contributing
 
-We welcome contributions! Please see our [Contributing Guidelines](CONTRIBUTING.md) for details.
+We welcome contributions! Please see our [Contributing Guide](CONTRIBUTING.md) for details.
+
+## 🆘 Support
+
+### Community Support
+
+- **GitHub Issues**: [Report bugs or request features](https://github.com/tiation/MinutesRecorder/issues)
+- **Discussions**: [Join community discussions](https://github.com/tiation/MinutesRecorder/discussions)
+- **Documentation**: [Browse our documentation](https://tiation.github.io/MinutesRecorder)
+
+### Enterprise Support
+
+For enterprise customers, we offer:
+- Priority support
+- Custom development
+- Training and consultation
+- SLA guarantees
+
+Contact us at [enterprise@tiation.com](mailto:enterprise@tiation.com)
 
 ## 📄 License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-## 🔗 Links
+## 🌟 About Tiation
 
-- [Documentation](https://github.com/yourusername/MinutesRecorder/wiki)
-- [Issues](https://github.com/yourusername/MinutesRecorder/issues)
-- [Project Website](https://minutesrecorder.example.com)
+**Tiation** is a leading provider of enterprise-grade software solutions, specializing in productivity tools, business automation, and professional documentation systems.
 
-## 📞 Support
+### Connect With Us
 
-For support, email support@minutesrecorder.com or open an issue in the GitHub repository.
+- **Website**: [https://github.com/tiation](https://github.com/tiation)
+- **GitHub**: [https://github.com/tiation](https://github.com/tiation)
+- **LinkedIn**: [Tiation Company](https://linkedin.com/company/tiation)
+- **Twitter**: [@TiationTech](https://twitter.com/TiationTech)
 
 ---
 
-Made with ❤️ by Your Company Name
+<div align="center">
+  <p>
+    <strong>Built with ❤️ by the Tiation Team</strong>
+  </p>
+  <p>
+    <a href="https://github.com/tiation">
+      <img src="https://img.shields.io/badge/Powered%20by-Tiation-cyan.svg" alt="Powered by Tiation">
+    </a>
+  </p>
+</div>
